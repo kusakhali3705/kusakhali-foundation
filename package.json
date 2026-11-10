@@ -1,9 +1,13 @@
-{
-  "name": "kusakhali-foundation",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {"dev": "vite --host 0.0.0.0", "build": "vite build", "preview": "vite preview"},
-  "dependencies": {"@supabase/supabase-js": "^2.57.0", "lucide-react": "^0.468.0", "react": "^18.3.1", "react-dom": "^18.3.1"},
-  "devDependencies": {"@vitejs/plugin-react": "^4.3.4", "vite": "^6.0.5"}
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+if (!supabaseUrl || !supabaseKey) {
+  throw new Error('Supabase URL or Publishable Key is missing');
 }
+
+export const supabase = createClient(
+  supabaseUrl,
+  supabaseKey
+);
