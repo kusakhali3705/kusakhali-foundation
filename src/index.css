@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f6f2;
+  color: #173d2b;
+}
+
+.header {
+  background: linear-gradient(135deg, #064b2c, #0b7044);
+  color: #fff;
+  padding: 35px 15px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.header p {
+  color: #e6d29b;
+}
+
+.dashboard {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+.dashboard h2 {
+  margin-bottom: 25px;
+  color: #14532d;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2d3a5;
+  border-radius: 14px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px #00000010;
+}
+
+.card h3 {
+  color: #916d24;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 25px;
+  font-weight: bold;
+  color: #07532f;
+}
+
+@media (max-width: 500px) {
+  .header h1 {
+    font-size: 20px;
+  }
+}
